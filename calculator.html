@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahim's Calculator</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #faf5b6;
+}
+h1, h2{
+    text-align: center;
+    letter-spacing: 4px;
+}
+.card{
+    margin: 0 auto;
+    max-width: 350px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    font-size: 0;
+}
+.card:hover{
+    box-shadow: 5px 12px 16px 0px rgba(0,0,0,0.3);
+}
+.calc-head #display{
+    width: 335px;
+    height: 80px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 5px;
+    letter-spacing: 3px;
+}
+.calc-btn .btn{
+    width: 87px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #1f2326;
+    color: white;
+}
+.btn-style{
+    width: 87px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 18px;   
+    background-color: rgb(187, 153, 248);
+    color: white;
+}
+.btn-last{
+    width: 87px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 18px;   
+    background-color: rgb(252, 155, 10);
+    color: white;
+}
+.calc-btn .btn:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+.btn-style:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+.btn-last:hover{
+    background-color: rgb(71, 13, 3);
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <h1>MAHIM'S</h1>
+    <h2>CALCULATOR</h2>
+    <div class="card" name="card">
+        <div class="calc-head" name="display1">
+            <form name="calculator">
+            <input type="text" id="display" name="display" maxlength="10">
+        
+        </div>
+        <div class="calc-body">
+            <div class="calc-btn">
+                <input type="button" class="btn" value="(" onclick="Clickff()">
+                <input type="button" class="btn" value=")" onclick="Clickfl()">
+                <input type="button" class="btn" value="%" onclick="Clickmodu()">
+                <input type="button" class="btn-style" value="CE" onclick="Clickreset()">
+            </div>
+            <div class="calc-btn">
+                <input type="button" class="btn" value="7" onclick="Clickseven()">
+                <input type="button" class="btn" value="8" onclick="Clickeight()">
+                <input type="button" class="btn" value="9" onclick="Clicknine()">
+                <input type="button" class="btn-style" value="&#xf7;" onclick="Clickdvd()">
+            </div>            
+            <div class="calc-btn">
+                <input type="button" class="btn" value="4" onclick="Clickfour()">
+                <input type="button" class="btn" value="5" onclick="Clickfive()">
+                <input type="button" class="btn" value="6" onclick="Clicksix()">
+                <input type="button" class="btn-style" value="&#xd7;" onclick="Clickmult()">
+            </div>            
+            <div class="calc-btn">
+                <input type="button" class="btn" name="one" value="1" onclick="Clickone()">
+                <input type="button" class="btn" value="2" onclick="Clicktwo()">
+                <input type="button" class="btn" value="3" onclick="Clickthree()">
+                <input type="button" class="btn-style" value="-" onclick="Clickminus()">
+            </div>            
+            <div class="calc-btn">
+                <input type="button" class="btn" value="0" onclick="Clickzero()">
+                <input type="button" class="btn" value="." onclick="Clickpoint()">
+                <input type="button" class="btn-last" value="=" onclick="Clickequal()">
+                <input type="button" class="btn-style" value="+" onclick="Clickplus()">
+            </div>
+
+        </div>
+    </form>
+    </div>
+    <script>
+            function Clickone(){
+            document.calculator.display.value += 1;
+            }
+            function Clicktwo(){
+            document.calculator.display.value += 2;
+            }
+            function Clickthree(){
+            document.calculator.display.value += 3;
+            }
+            function Clickfour(){
+            document.calculator.display.value += 4;
+            }
+            function Clickfive(){
+            document.calculator.display.value += 5;
+            }
+            function Clicksix(){
+            document.calculator.display.value += 6;
+            }
+            function Clickseven(){
+            document.calculator.display.value += 7;
+            }
+            function Clickeight(){
+            document.calculator.display.value += 8;
+            }
+            function Clicknine(){
+            document.calculator.display.value += 9;
+            }           
+            function Clickzero(){
+            document.calculator.display.value += 0;
+            }
+            function Clickpoint(){
+            document.calculator.display.value += ".";
+            }
+            function Clickff(){
+            document.calculator.display.value += "(";
+            }
+            function Clickfl(){
+            document.calculator.display.value += ")";
+            }
+            function Clickmult(){
+            document.calculator.display.value += "*";
+            }
+            function Clickmodu(){
+            document.calculator.display.value += "%";
+            }
+            function Clickminus(){
+            document.calculator.display.value += "-";
+            }
+            function Clickplus(){
+            document.calculator.display.value += "+";
+            }
+            function Clickdvd(){
+            document.calculator.display.value += "/";
+            }
+            function Clickequal(){
+            var display = eval(document.calculator.display.value);
+            document.calculator.display.value = display;
+            }
+            function Clickreset(){
+            document.calculator.display.value = "";
+            }
+    </script>
+
+    
+</body>
+</html>
